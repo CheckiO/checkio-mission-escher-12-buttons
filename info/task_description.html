@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}buttons.png" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+After completing the previous task you’ve been a “little” agitated. The ghost said just one word: “Worthy...”, and disappeared through the wall. You are incredibly lucky that you’ve met him here, and not next to the Hypercube, because in that case he surely wouldn’t let you go alive.<br>
+<br>
+Walking down the corridor further, you’ve been taken aback by the fact that it’s becoming narrower and the ceiling is getting lower. But it didn’t last long, because soon you’ve hit the dead end in a form of a bare wall, not in any way suggesting the it’s possible to go further. Some kind of figures on the ceiling made you wonder. Maybe there is a way to interact with them?..
+</div>
+
+<p>
+There were buttons on the ceiling in the form of geometrical figures with written numbers on them. Your task is to press them in the correct order - starting from the most "valuable" and finishing with the least "valuable" one. The figure’s value corresponds with the sum of all the numbers on it. A separate geometrical figure is the one whose elements are directly connected to one another (horizontally or vertically). Your function should return a list where the values ​​of all figures will be listed in the order in which they should be pressed. 0 is a symbol for separating the individual figures. If several figures have the same value, they can be pressed in any order.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> ceiling with numbers as the multiline string.
+</p>
+
+<p>
+    <strong>Output: </strong> right order of the buttons.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+buttons(`
+001203
+023001
+100220`) == [8, 4, 4, 1]
+</pre>
+{% else %}
+<pre class="brush: python">
+buttons('''
+001203
+023001
+100220''') == [8, 4, 4, 1]
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For the graphical analisys.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition</strong>:<br>
+    1 <= the number of buttons <= 10
+</p>
