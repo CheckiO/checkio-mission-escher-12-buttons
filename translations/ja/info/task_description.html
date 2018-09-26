@@ -1,0 +1,75 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}buttons.jpg" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+先の問題を解決したあなたは少しだけ動揺していました。
+亡霊は "価値あるもの...(Worthy...)" といい残して壁の中へ消えていきました。
+あなたがハイパーキューブを持ってない状態で彼に会ったのは大変幸運でした。
+でなければ彼はあなたを生かしてはおかなかったでしょう。<br>
+<br>
+あなたは回廊を奥へ進むほどに幅が狭く天井が低くなっていくのに驚きましたがそれもすぐに終わりました。 なぜならむき出しの壁で行き止まりになったからです。
+その壁には先に進むための手掛かりは何もありませんでした。
+あなたは天井にいくつかの数字が描かれているのを見付けました。
+これを操作することで先に進めるかもしれません。
+</div>
+
+<p>
+いくつかの数字が書かれた幾何学的な形状のボタンが天井にいくつかあります。
+あなたの仕事は正しい順番でそれらを押すことです。
+価値がもっとも大きいものから始めて一番小さいものが最後です。
+ボタンの価値はそれに描かれた数字の合計です。
+一つのボタンは互いに上下左右に接している数字で構成されています。
+あなたの関数はボタンを押す順番をボタンの価値のリストとして返さなくてはなりません。
+0 は各ボタンを区分します。
+もしいくつかのボタンが同じ価値を持つ場合はその順は任意です。
+</p>
+
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}figures.jpg" style="max-height: 300px">
+</div>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> 天井の数字を表す複数行の文字列
+</p>
+
+<p>
+    <strong>出力: </strong> ボタンの正しい順番のリスト
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>例:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+buttons(`
+001203
+023001
+100220`) == [8, 4, 4, 1]
+</pre>
+{% else %}
+<pre class="brush: python">
+buttons('''
+001203
+023001
+100220''') == [8, 4, 4, 1]
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    画像の分析に使用できます。
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    1 <= the number of buttons <= 10
+</p>
